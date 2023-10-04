@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Client.master.cs" Inherits="AirLineReservation.Clients.Client" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Clients.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            height: 78px;
+        }
+        .auto-style2 {
+            margin-left: 238px;
+        }
+    </style>
+
+</head>
+<body>
+     <form id="form1" runat="server">
+    <div id="aheader" class="auto-style1">
+       
+        <asp:Image ID="Image1" runat="server" ImageUrl="../logo.png" style="color:Navy;background-color:Black;height:120px;width:100%;border-width:0px;"/>
+       
+    </div>
+    <div id="main">
+    <div id="menu">
+        <table class="tbl">
+            <tr>
+                <td class="tblhead">
+                    CUSTOMER MENU</td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button1" runat="server" CssClass="btnmenu" 
+                        Text="Airline Schedule" PostBackUrl="~/Clients/AirlineSchedule.aspx" />
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <asp:Button ID="Button2" runat="server" CssClass="btnmenu" 
+                        Text="Fare Tariffs" PostBackUrl="~/Clients/FareTariffs.aspx" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button3" runat="server" CssClass="btnmenu" Text="Available Seats" 
+                        PostBackUrl="~/Clients/AvailableSeats.aspx" />
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <asp:Button ID="Button10" runat="server" CssClass="btnmenu" Text="Ticket Booking" 
+                        PostBackUrl="~/Clients/Ticket_Booking.aspx" />
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <asp:Button ID="Button4" runat="server" CssClass="btnmenu" Text="Ticket Cancellation" 
+                        PostBackUrl="~/Clients/Ticket_Cancellation.aspx"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button9" runat="server" CssClass="btnmenu" Text="LogOut" 
+                        PostBackUrl="~/Home.aspx" />
+                </td>
+            </tr>
+        </table>
+        </div>
+    <div id="cnt" class="auto-style2"><asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder></div>
+    </div>
+    </form>
+</body>
+</html>
